@@ -1,15 +1,16 @@
 package ru.lmars.calculator;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main
 {
 	public static void main(String[] args)
 	{
-		ApplicationContext applicationContext = new FileSystemXmlApplicationContext("/beans.xml");
+		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext();
+		appContext.scan("ru.lmars.calculator");
+		appContext.refresh();
 		
-		Calculator calculator = applicationContext.getBean(Calculator.class);
+		Calculator calculator = appContext.getBean(Calculator.class);
 		calculator.Run(1, 2);
 	}
 }
