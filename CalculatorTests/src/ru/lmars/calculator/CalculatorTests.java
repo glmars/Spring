@@ -9,6 +9,7 @@ public class CalculatorTests extends MockObjectTestCase
 	{
 		final Operation operationMock = mock(Operation.class);
 		final ResultWriter resultWriterMock = mock(ResultWriter.class);
+		final Logger loggerMock = mock(Logger.class);
 		
 		checking(new Expectations()
 		{{
@@ -16,7 +17,7 @@ public class CalculatorTests extends MockObjectTestCase
 			oneOf(resultWriterMock).Write(3);
 		}});
 		
-		Calculator calculator = new Calculator(operationMock, resultWriterMock);
+		Calculator calculator = new Calculator(operationMock, resultWriterMock, loggerMock);
 		calculator.Run(1, 2);
 	}
 
