@@ -12,4 +12,5 @@
 
 	<bean id="addOperation" class="ru.lmars.calculator.AddOperation" />
 	<bean id="consoleResultWriter" class="ru.lmars.calculator.ConsoleResultWriter" />
+	<bean id="consoleLogger" class="ru.lmars.calculator.ConsoleLogger" />
 </beans>
