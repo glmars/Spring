@@ -6,12 +6,9 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext();
+		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext(BeansConfiguration.class);
 		try
 		{
-			appContext.scan("ru.lmars.calculator");
-			appContext.refresh();
-			
 			Calculator calculator = appContext.getBean(Calculator.class);
 			calculator.Run(1, 2);
 		}
