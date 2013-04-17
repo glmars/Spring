@@ -1,7 +1,9 @@
 package ru.lmars.calculator;
 
-import org.jmock.integration.junit4.JUnit4RuleMockery;
+import org.jmock.integration.junit4.JUnitRuleMockery;
 import org.jmock.Expectations;
+import org.junit.Rule;
+import org.junit.Test;
 
 public class CalculatorTests
 {
