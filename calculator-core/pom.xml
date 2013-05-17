@@ -41,6 +41,12 @@
 					<additionalBuildcommands>
 						<buildcommand>org.springframework.ide.eclipse.core.springbuilder</buildcommand>
 					</additionalBuildcommands>
+					<additionalConfig>
+						<file>
+							<name>.springBeans</name>
+							<location>/springBeans-config.xml</location>
+						</file>
+					</additionalConfig>
 				</configuration>
 			</plugin>
 		</plugins>
