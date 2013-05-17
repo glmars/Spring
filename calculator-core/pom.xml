@@ -32,6 +32,24 @@
 					</includes>
 				</configuration>
 			</plugin>			
+			<plugin>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<additionalProjectnatures>
+						<projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
+					</additionalProjectnatures>
+					<additionalBuildcommands>
+						<buildcommand>org.springframework.ide.eclipse.core.springbuilder</buildcommand>
+					</additionalBuildcommands>
+					<additionalConfig>
+						<file>
+							<name>.springBeans</name>
+							<location>/springBeans-config.xml</location>
+						</file>
+					</additionalConfig>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
